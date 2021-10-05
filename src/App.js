@@ -1,11 +1,28 @@
-import React from "react";
-import "./style.css";
+import './style.css';
+import React from 'react';
+import React, { Component } from 'react';
 
-export default function App() {
-  return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      //data: ' Default Lable',
+      data: 1,
+    };
+  }
+
+  lessons() {
+    //this.setState({ data: 'Updated headline' });
+    this.setState({ data: this.state.data + 1 });
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>{this.state.data}</h1>
+        <button onClick={() => this.lessons()}>Update</button>
+      </div>
+    );
+  }
 }
+export default App;
