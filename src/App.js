@@ -1,28 +1,19 @@
-import './style.css';
 import React from 'react';
-import React, { Component } from 'react';
+import { useState } from 'react';
+import './style.css';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      //data: ' Default Lable',
-      data: 1,
-    };
+function changeName() {
+  //const [data, setData] = useState(' Main Headline');
+  const [data, setData] = useState(1);
+  function updateData() {
+    //setData('Update Headline');
+    setData(data + 1);
   }
-
-  lessons() {
-    //this.setState({ data: 'Updated headline' });
-    this.setState({ data: this.state.data + 1 });
-  }
-
-  render() {
-    return (
-      <div>
-        <h1>{this.state.data}</h1>
-        <button onClick={() => this.lessons()}>Update</button>
-      </div>
-    );
-  }
+  return (
+    <div className="Lessons">
+      <h1>{data}</h1>
+      <button onClick={updateData}>Update</button>
+    </div>
+  );
 }
-export default App;
+export default changeName;
