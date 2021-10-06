@@ -1,11 +1,15 @@
 import React from 'react';
-import './style.css';
+import ReactDOM from 'react-dom';
+import { add, mult } from './Numbers';
 
-export default function App() {
+function App() {
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-    </div>
+    <>
+      <ul>
+        <li>Sum = {add(10, 9)}</li>
+        <li>Mult = {mult(10, 9)}</li>
+      </ul>
+    </>
   );
 }
+export default App;
