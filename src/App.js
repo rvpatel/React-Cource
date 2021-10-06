@@ -1,19 +1,11 @@
 import React from 'react';
-import { useState } from 'react';
 import './style.css';
 
-function changeName() {
-  //const [data, setData] = useState(' Main Headline');
-  const [data, setData] = useState(1);
-  function updateData() {
-    //setData('Update Headline');
-    setData(data + 1);
-  }
+export default function App() {
   return (
-    <div className="Lessons">
-      <h1>{data}</h1>
-      <button onClick={updateData}>Update</button>
+    <div>
+      <h1>Hello StackBlitz!</h1>
+      <p>Start editing to see some magic happen :)</p>
     </div>
   );
 }
-export default changeName;
