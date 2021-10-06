@@ -2,8 +2,9 @@ function add(a, b) {
   let sum = a + b;
   return sum;
 }
+
 function mult(a, b) {
-  let mul = a * b;
-  return mul;
+  let mult = a * b;
+  return mult;
 }
-export default { add, mult };
+export { add, mult };
