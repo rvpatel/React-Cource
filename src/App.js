@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+import Musicianz from './Musicianz';
 import './style.css';
 
-export default function App() {
+function App() {
+  const [name, setName] = useState('Blogs');
+
   return (
-    <div>
-      <h1 className="heading">Hello, Ravikumar</h1>
+    <div className="App">
       <p>Good Morning :)</p>
+      <Musicianz
+        name={name}
+        list={{ first: 'First blog', second: 'Second blog' }}
+      />
+
+      <p>
+        <button
+          onClick={() => {
+            setName('News');
+          }}
+        >
+          Check
+        </button>
+      </p>
     </div>
   );
 }
+export default App;
